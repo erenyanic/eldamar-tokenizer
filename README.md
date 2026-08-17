@@ -148,11 +148,11 @@ python src/generate.py <arch> <tokenizer> [--count N] [--temperature T] [--seed 
 
 ## Turkish 128K BPE tokeniser (separate sub-project)
 
-[`turkish_bpe_128k/`](turkish_bpe_128k/) is a **separate** sub-project: a production-style **128,000-token byte-level BPE tokeniser for Turkish**, trained on ~200M characters from two Hugging Face review datasets and published as **[Erenyanic/turkish-bpe-128k](https://huggingface.co/Erenyanic/turkish-bpe-128k)**.
+[`turkish_bpe_128k/`](turkish_bpe_128k/) is a **separate** sub-project: a production-style **128,000-token byte-level BPE tokeniser for Turkish**, trained on ~200M characters from two Hugging Face review datasets and published as **[erenyanic/turkish_bpe_128k](https://huggingface.co/erenyanic/turkish_bpe_128k)**.
 
 ```python
 from transformers import AutoTokenizer
-tok = AutoTokenizer.from_pretrained("Erenyanic/turkish-bpe-128k")
+tok = AutoTokenizer.from_pretrained("erenyanic/turkish_bpe_128k")
 ids = tok.encode("İstanbul'da yağmur yağıyor.", add_special_tokens=False)
 [tok.decode([i]) for i in ids]
 # ['İstanbul', "'da", ' yağmur', ' yağıyor', '.']

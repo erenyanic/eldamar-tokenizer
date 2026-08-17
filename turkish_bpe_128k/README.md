@@ -23,7 +23,7 @@ Training and evaluation code: **[ErenYanic/eldamar-tokenizer](https://github.com
 ```python
 from transformers import AutoTokenizer
 
-tok = AutoTokenizer.from_pretrained("Erenyanic/turkish-bpe-128k")
+tok = AutoTokenizer.from_pretrained("erenyanic/turkish_bpe_128k")
 ids = tok.encode("İstanbul'da yağmur yağıyor.", add_special_tokens=False)
 
 # tokenize() returns byte-level forms -- see the note on `Ġ` and `Ã§` below.
